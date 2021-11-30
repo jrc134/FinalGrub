@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/donations" exact component={DonationHome} />
           <Route path="/donations/search" exact component={DonationHome} />
           <Route path="/donations/:id" exact component={DonationDetails} />
-          <Route path={['/creators/:name', '/tags/:name']} component={CreatorOrTag} />
+          <Route path={['/creators/:creator/:name', '/tags/:name']} component={CreatorOrTag} />
           <Route path="/auth" exact component={Auth} />
         </Switch>
       </Container>
