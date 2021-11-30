@@ -7,7 +7,7 @@ import Post from '../Posts/Post/Post';
 import { getPostsByCreator, getPostsBySearch } from '../../actions/posts';
 
 const CreatorOrTag = () => {
-  const { name } = useParams();
+  const { creator, name } = useParams();
   const dispatch = useDispatch();
   const { posts, isLoading } = useSelector((state) => state.posts);
 
@@ -15,9 +15,9 @@ const CreatorOrTag = () => {
 
   useEffect(() => {
     if (location.pathname.startsWith('/tags')) {
-      dispatch(getPostsBySearch({ tags: name }));
+      dispatch(getPostsBySearch({ tags: creator }));
     } else {
-      dispatch(getPostsByCreator(name));
+      dispatch(getPostsByCreator(creator));
     }
   }, []);
 
