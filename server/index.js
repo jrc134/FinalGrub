@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
+import donationRoutes from './routes/donations.js';
 import userRouter from "./routes/user.js";
 
 const app = express();
@@ -14,9 +15,10 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.use('/donations', donationRoutes);
 app.use("/user", userRouter);
 
-const CONNECTION_URL = '';
+const CONNECTION_URL = 'mongodb+srv://kvh8:everbloom21@cluster0.alqoc.mongodb.net/FinalGrub?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
