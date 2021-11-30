@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
+import donationRoutes from './routes/donations.js';
 import userRouter from "./routes/user.js";
 
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
 
 app.use('/posts', postRoutes);
+app.use('/donations', donationRoutes);
 app.use("/user", userRouter);
 
 const CONNECTION_URL = 'mongodb+srv://hec26:46O9rGpouFhRJ7Tu@test1.evkqd.mongodb.net/Test1?retryWrites=true&w=majority';

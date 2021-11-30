@@ -20,5 +20,15 @@ export const comment = (value, id) => API.post(`/posts/${id}/commentPost`, { val
 export const updatePost = (id, updatedPost) => API.patch(`/posts/${id}`, updatedPost);
 export const deletePost = (id) => API.delete(`/posts/${id}`);
 
+export const fetchDonation = (id) => API.get(`/donations/${id}`);
+export const fetchDonations = (page) => API.get(`/donations?page=${page}`);
+export const fetchDonationsByCreator = (name) => API.get(`/donations/creator?name=${name}`);
+export const fetchDonationsBySearch = (searchQuery) => API.get(`/donations/search?searchQuery=${searchQuery.search || 'none'}&tags=${searchQuery.tags}`);
+export const createDonation = (newDonation) => API.post('/donations', newDonation);
+export const likeDonation = (id) => API.patch(`/donations/${id}/likeDonation`);
+export const commentDonation = (value, id) => API.post(`/donations/${id}/commentDonation`, { value });
+export const updateDonation = (id, updatedDonation) => API.patch(`/donations/${id}`, updatedDonation);
+export const deleteDonation = (id) => API.delete(`/donations/${id}`);
+
 export const signIn = (formData) => API.post('/user/signin', formData);
 export const signUp = (formData) => API.post('/user/signup', formData);

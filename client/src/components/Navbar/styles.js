@@ -20,6 +20,12 @@ export default makeStyles((theme) => ({
     fontSize: '2em',
     fontWeight: 300,
   },
+  donation: {
+    color: 'rgba(0,183,255, 1)',
+    textDecoration: 'none',
+    marginLeft: '150px',
+    marginRight: '15px',
+  },
   image: {
     marginLeft: '10px',
     marginTop: '5px',
