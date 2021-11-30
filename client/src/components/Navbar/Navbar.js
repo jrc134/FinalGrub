@@ -40,6 +40,7 @@ const Navbar = () => {
       <Link to="/" className={classes.brandContainer}>
         <img component={Link} to="/" src={logotemp2} alt="icon" height="200px" />
       </Link>
+      <Typography component={Link} to="/donations" className={classes.donation} variant="h5" align="center">Donations</Typography>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
