@@ -6,17 +6,15 @@ import Donation from './Donation/Donation';
 import useStyles from './styles';
 
 const Donations = ({ setCurrentId }) => {
-    const donation = useSelector((state) => state.donations);
-    const isLoading = useSelector((state) => state.donations);
-    //const { donation, isLoading } = useSelector((state) => state.donations);
+    const { donations, isLoading } = useSelector((state) => state.donations);
     const classes = useStyles();
 
-    if (!donation.length && !isLoading) return 'No donations';
+    if (!donations.length && !isLoading) return 'No donations';
 
     return (
         isLoading ? <CircularProgress /> : (
             <Grid className={classes.container} container alignItems="stretch" spacing={3}>
-                {donation.map((donation) => (
+                {donations.map((donation) => (
                     <Grid key={donation._id} item xs={12} sm={6} md={6} lg={3}>
                         <Donation donation={donation} setCurrentId={setCurrentId} />
                     </Grid>
