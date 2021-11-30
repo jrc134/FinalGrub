@@ -50,6 +50,7 @@ const Post = () => {
             </Link>
           ))}
           </Typography>
+          <Typography gutterBottom variant="h5" component="p">{post.tag}</Typography>
           <Typography gutterBottom variant="h5" component="p">{post.message}</Typography>
           <Typography variant="body2">
             Created by:

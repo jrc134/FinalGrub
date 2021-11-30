@@ -50,6 +50,7 @@ const Donation = () => {
             </Link>
           ))}
           </Typography>
+          <Typography gutterBottom variant="h5" component="p">{donation.tag}</Typography>
           <Typography gutterBottom variant="h5" component="p">{donation.message}</Typography>
           <Typography variant="body2">
             Created by:
