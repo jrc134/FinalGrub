@@ -54,13 +54,13 @@ const DonationHome = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <AppBar className={classes.appBarSearch} position="static" color="inherit">
-              <TextField onKeyDown={handleKeyPress} name="search" variant="outlined" label="Search Recipes" fullWidth value={search} onChange={(e) => setSearch(e.target.value)} />
+              <TextField onKeyDown={handleKeyPress} name="search" variant="outlined" label="Search Donations" fullWidth value={search} onChange={(e) => setSearch(e.target.value)} />
               <ChipInput
                 style={{ margin: '10px 0' }}
                 value={tags}
                 onAdd={(chip) => handleAddChip(chip)}
                 onDelete={(chip) => handleDeleteChip(chip)}
-                label="Search Tags"
+                label="Search Cities"
                 variant="outlined"
               />
               <Button onClick={searchDonation} className={classes.searchButton} variant="contained" color="primary">Search</Button>
