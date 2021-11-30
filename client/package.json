@@ -14,6 +14,8 @@
     "jwt-decode": "^3.1.2",
     "material-ui-chip-input": "^1.1.0",
     "moment": "^2.27.0",
+    "nodemon": "^2.0.15",
+    "npx": "^10.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-file-base64": "^1.0.3",
