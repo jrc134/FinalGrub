@@ -40,6 +40,7 @@ const Donation = ({ donation, setCurrentId }) => {
                 <><ThumbUpAltOutlined fontSIze="small" />&nbsp;{likes.length} {likes.length === 1 ? 'Like' : 'Likes'} </>
             );
         }
+        
         return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>
     };
 

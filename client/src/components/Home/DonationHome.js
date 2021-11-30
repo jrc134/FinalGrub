@@ -7,7 +7,7 @@ import ChipInput from 'material-ui-chip-input';
 import { getDonationsBySearch } from '../../actions/donations';
 import Donations from '../Donations/Donations';
 import DonationForm from '../Form/DonationForm';
-import Pagination from '../Pagination';
+import DonationPagination from '../DonationPagination';
 import useStyles from './styles';
 
 function useQuery() {
@@ -68,7 +68,7 @@ const DonationHome = () => {
             <DonationForm currentId={currentId} setCurrentId={setCurrentId} />
             {(!searchQuery && !tags.length) && (
               <Paper className={classes.pagination} elevation={6}>
-                <Pagination page={page} />
+                <DonationPagination page={page} />
               </Paper>
             )}
           </Grid>
