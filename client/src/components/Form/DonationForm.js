@@ -59,7 +59,7 @@ const Form = ({ currentId, setCurrentId }) => {
   return (
     <Paper className={classes.paper} elevation={6}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${donation?.title}"` : 'Creating a Recipe'}</Typography>
+        <Typography variant="h6">{currentId ? `Editing "${donation?.title}"` : 'Creating a Donation'}</Typography>
         <TextField name="title" variant="outlined" label="Title" fullWidth value={donationData.title} onChange={(e) => setDonationData({ ...donationData, title: e.target.value })} />
         <TextField name="message" variant="outlined" label="Message" fullWidth multiline rows={4} value={donationData.message} onChange={(e) => setDonationData({ ...donationData, message: e.target.value })} />
         <div style={{ padding: '5px 0', width: '94%' }}>
