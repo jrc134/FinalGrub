@@ -41,6 +41,9 @@ const Navbar = () => {
         <img component={Link} to="/" src={logotemp2} alt="icon" height="200px" />
       </Link>
       <Typography component={Link} to="/donations" className={classes.donation} variant="h5" align="center">Donations</Typography>
+      <Typography component={Link} to="/donations" className={classes.donation} variant="h5" align="center">Donations</Typography>
+      {<Typography component={Link} to={`/creators/${user?.result?.googleId || user?.result?._id}/${user?.result?.name}`} className={classes.donation} variant="h5" align="center">My Profile</Typography>
+      }
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>

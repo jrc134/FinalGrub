@@ -6,7 +6,7 @@ import Donation from './Donation/Donation';
 import useStyles from './styles';
 
 const Donations = ({ setCurrentId }) => {
-    const { donations, isLoading } = useSelector((state) => state.donations);
+const { donations, isLoading } = useSelector((state) => state.donations);
     const classes = useStyles();
 
     if (!donations.length && !isLoading) return 'No donations';
