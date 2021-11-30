@@ -43,23 +43,21 @@ const Donation = () => {
     <Paper style={{ padding: '20px', borderRadius: '15px' }} elevation={6}>
       <div className={classes.card}>
         <div className={classes.section}>
-          <Typography variant="h3" component="h2">{donation.title}</Typography>
+          <Typography variant="h4" component="h2">{donation.title}</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{donation.tags.map((tag) => (
             <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` #${tag} `}
             </Link>
           ))}
           </Typography>
-          <Typography gutterBottom variant="body1" component="p">{donation.message}</Typography>
-          <Typography variant="h6">
+          <Typography gutterBottom variant="h5" component="p">{donation.message}</Typography>
+          <Typography variant="body2">
             Created by:
             <Link to={`/creators/${donation.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` ${donation.name}`}
             </Link>
           </Typography>
-          <Typography variant="body1">{moment(donation.createdAt).fromNow()}</Typography>
-          <Divider style={{ margin: '20px 0' }} />
-          <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography>
+          <Typography variant="body2">{moment(donation.createdAt).fromNow()}</Typography>
           <Divider style={{ margin: '20px 0' }} />
           <CommentSection donation={donation} />
           <Divider style={{ margin: '20px 0' }} />

@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     borderRadius: '20px',
     objectFit: 'cover',
     width: '100%',
-    maxHeight: '600px',
+    maxHeight: '400px',
 
   },
   card: {
@@ -23,6 +23,8 @@ export default makeStyles((theme) => ({
   },
   imageSection: {
     marginLeft: '20px',
+    maxHeight: '250px',
+    maxWidth: '500px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
     },
