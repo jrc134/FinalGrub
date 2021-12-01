@@ -51,7 +51,7 @@ const Donation = () => {
           ))}
           </Typography>
           <Typography gutterBottom variant="h5" component="p">{donation.tag}</Typography>
-          <Typography gutterBottom variant="h5" component="p">{donation.message}</Typography>
+          <Typography gutterBottom style={{whiteSpace: 'pre-wrap'}} variant="h5" component="p">{donation.message}</Typography>
           <Typography variant="body2">
             Created by:
             <Link to={`/creators/${donation.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
