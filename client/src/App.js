@@ -9,6 +9,7 @@ import Home from './components/Home/Home';
 import DonationHome from './components/Home/DonationHome';
 import Auth from './components/Auth/Auth';
 import CreatorOrTag from './components/CreatorOrTag/CreatorOrTag';
+import AboutUs from './components/AboutUs/AboutUs';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/donations/:id" exact component={DonationDetails} />
           <Route path={['/creators/:creator/:name', '/tags/:name']} component={CreatorOrTag} />
           <Route path="/auth" exact component={Auth} />
+          <Route path="/about" exact component={AboutUs} />
         </Switch>
       </Container>
     </BrowserRouter>

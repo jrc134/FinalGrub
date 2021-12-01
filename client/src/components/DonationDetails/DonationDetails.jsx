@@ -44,17 +44,19 @@ const Donation = () => {
       <div className={classes.card}>
         <div className={classes.section}>
           <Typography variant="h4" component="h2">{donation.title}</Typography>
+          <Typography variant="h6" component="h2">Cities Available To</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{donation.tags.map((tag) => (
-            <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
-              {` #${tag} `}
-            </Link>
+            <Typography display="block" style={{ textDecoration: 'none', }}>
+              {` ${tag} `}
+            </Typography>
           ))}
           </Typography>
           <Typography gutterBottom variant="h5" component="p">{donation.tag}</Typography>
+          <Typography variant="h4" component="h2">Description</Typography>
           <Typography gutterBottom style={{whiteSpace: 'pre-wrap'}} variant="h5" component="p">{donation.message}</Typography>
           <Typography variant="body2">
             Created by:
-            <Link to={`/creators/${donation.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
+            <Link to={`/creators/${donation.creator}/${donation.name}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
               {` ${donation.name}`}
             </Link>
           </Typography>

@@ -38,11 +38,12 @@ export default makeStyles({
   },
   details: {
     display: 'flex',
+    visibility: 'hidden',
     justifyContent: 'space-between',
     margin: '20px',
   },
   title: {
-    padding: '0 16px',
+    padding: '5px 16px',
   },
   cardActions: {
     padding: '0 16px 8px 16px',

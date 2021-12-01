@@ -44,13 +44,15 @@ const Post = () => {
       <div className={classes.card}>
         <div className={classes.section}>
           <Typography variant="h4" component="h2">{post.title}</Typography>
+          <Typography variant="h6" component="h2">Ingredients</Typography>
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post.tags.map((tag) => (
-            <Link to={`/tags/${tag}`} style={{ textDecoration: 'none', color: '#3f51b5' }}>
-              {` #${tag} `}
-            </Link>
+            <Typography display="block" style={{ textDecoration: 'none', }}>
+              {` ${tag} `}
+            </Typography>
           ))}
           </Typography>
           <Typography gutterBottom variant="h5" component="p">{post.tag}</Typography>
+          <Typography variant="h4" component="h2">Instructions</Typography>
           <Typography gutterBottom style={{whiteSpace: 'pre-wrap'}} variant="h5" component="p">{post.message}</Typography>
           <Typography variant="body2">
             Created by:

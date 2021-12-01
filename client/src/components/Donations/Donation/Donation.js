@@ -77,12 +77,10 @@ const Donation = ({ donation, setCurrentId }) => {
               </Button>
             </div>
             )}
-            <div className={classes.details}>
-              <Typography variant="body2" color="textSecondary" component="h2">{donation.tags.map((tag) => `#${tag} `)}</Typography>
-            </div>
+            
             <Typography className={classes.title} gutterBottom variant="h5" component="h2">{donation.title}</Typography>
             <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">{donation.message.split(' ').splice(0, 20).join(' ')}...</Typography>
+              <Typography style={{whiteSpace: 'pre-wrap'}} variant="body2" color="textSecondary" component="p">{donation.message.split(' ').splice(0, 20).join(' ')}...</Typography>
             </CardContent>
           </ButtonBase>
           <CardActions className={classes.cardActions}>

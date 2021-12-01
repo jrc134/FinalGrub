@@ -42,6 +42,7 @@ const Navbar = () => {
       </Link>
       <Typography component={Link} to="/posts" className={classes.donation} variant="h5" align="center">Recipes</Typography>
       <Typography component={Link} to="/donations" className={classes.donation} variant="h5" align="center">Donations</Typography>
+      <Typography component={Link} to="/about" className={classes.donation} variant="h5" align="center">About Us</Typography>
       {<Typography component={Link} to={`/creators/${user?.result?.googleId || user?.result?._id}/${user?.result?.name}`} className={classes.donation} variant="h5" align="center">My Profile</Typography>
       }
       <Toolbar className={classes.toolbar}>
