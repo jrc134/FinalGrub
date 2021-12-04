@@ -18,7 +18,7 @@ app.use('/posts', postRoutes);
 app.use('/donations', donationRoutes);
 app.use("/user", userRouter);
 
-const CONNECTION_URL = 'mongodb+srv://kvh8:everbloom21@cluster0.alqoc.mongodb.net/FinalGrub?retryWrites=true&w=majority';
+const CONNECTION_URL = '';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
